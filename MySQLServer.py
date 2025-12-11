@@ -27,7 +27,7 @@ def create_database():
         # Print success message
         print("Database 'alx_book_store' created successfully!")
         
-    except mysql.connector as err:
+    except mysql.connector.Error as err:
         # Handle connection errors
         if err.errno == 2003:
             print("Error: Failed to connect to MySQL server. Please ensure MySQL is running.")
